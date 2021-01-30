@@ -1,5 +1,9 @@
-const MyLoader = (props) => (
+import React from "react"
+import ContentLoader from "react-content-loader"
+
+const PizzaLoadingBlock = (props:any) => (
     <ContentLoader
+        className='pizza-block'
         speed={2}
         width={280}
         height={460}
@@ -16,4 +20,4 @@ const MyLoader = (props) => (
         <rect x="140" y="410" rx="20" ry="20" width="139" height="45" />
     </ContentLoader>
 )
-export default MyLoader
+export default PizzaLoadingBlock

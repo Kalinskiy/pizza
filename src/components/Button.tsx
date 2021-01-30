@@ -1,7 +1,13 @@
 import React from 'react';
 import classNames from 'classnames'
 
-const Button = ({onClick,className,outline,children}) => {
+type PropsType = {
+    onClick?: () => void
+    className: string
+    outline?: string | boolean
+    children: React.ReactNode
+}
+const Button = ({onClick, className, outline, children}: PropsType) => {
     return (
         <button
             onClick={onClick}

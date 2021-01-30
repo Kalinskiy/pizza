@@ -1,8 +1,10 @@
 const initialState = {
     isLoaded: false
 }
+export type SetPreloaderType = ReturnType<typeof setPreloader>
+type ActionTypes = SetPreloaderType
 
-export const appReducer = (state = initialState, action) => {
+export const appReducer = (state = initialState, action:ActionTypes) => {
     switch (action.type) {
 
         case 'SET_PRELOADER': {
@@ -17,7 +19,7 @@ export const appReducer = (state = initialState, action) => {
 
 }
 //action
-export const setPreloader = (preloader) => ({type: 'SET_PRELOADER', payload: preloader})
+export const setPreloader = (preloader:boolean) => ({type: 'SET_PRELOADER', payload: preloader})
 
 //thunk
 
